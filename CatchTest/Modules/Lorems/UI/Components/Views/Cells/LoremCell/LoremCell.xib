@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoremCell" rowHeight="75" id="SfQ-6n-aEF" customClass="LoremCell" customModule="CatchTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SfQ-6n-aEF" id="5Ij-kV-ws1">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{ Title }}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dv-Ud-pdm">
+                        <rect key="frame" x="15" y="27.5" width="67.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="QPL-Dn-g48"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                        <color key="textColor" red="0.023529411764705882" green="0.035294117647058823" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{ Subtitle }}" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVU-Js-DwJ">
+                        <rect key="frame" x="281.5" y="27.5" width="94.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="u9n-lY-be1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                        <color key="textColor" red="0.51372549019607838" green="0.51764705882352935" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disclosure" translatesAutoresizingMaskIntoConstraints="NO" id="7RV-XJ-1XU">
+                        <rect key="frame" x="391" y="31.5" width="8" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="Z6I-Zo-V4Z"/>
+                            <constraint firstAttribute="height" constant="13" id="kO2-QG-As4"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3Dv-Ud-pdm" firstAttribute="leading" secondItem="5Ij-kV-ws1" secondAttribute="leading" constant="15" id="7RC-aH-esQ"/>
+                    <constraint firstItem="3Dv-Ud-pdm" firstAttribute="top" secondItem="5Ij-kV-ws1" secondAttribute="top" constant="27.5" id="WTx-5Q-Mwf"/>
+                    <constraint firstItem="7RV-XJ-1XU" firstAttribute="centerY" secondItem="5Ij-kV-ws1" secondAttribute="centerY" id="XxV-MA-0yn"/>
+                    <constraint firstAttribute="trailing" secondItem="MVU-Js-DwJ" secondAttribute="trailing" constant="38" id="YMX-7F-7EX"/>
+                    <constraint firstItem="MVU-Js-DwJ" firstAttribute="centerY" secondItem="3Dv-Ud-pdm" secondAttribute="centerY" id="Zcy-Gn-VhJ"/>
+                    <constraint firstAttribute="bottom" secondItem="3Dv-Ud-pdm" secondAttribute="bottom" constant="27.5" id="bGu-5r-LH7"/>
+                    <constraint firstAttribute="trailing" secondItem="7RV-XJ-1XU" secondAttribute="trailing" constant="15" id="d0d-UD-obm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="subtitleLabel" destination="MVU-Js-DwJ" id="n5e-gM-bYP"/>
+                <outlet property="titleLabel" destination="3Dv-Ud-pdm" id="opz-Qa-34g"/>
+            </connections>
+            <point key="canvasLocation" x="37.681159420289859" y="45.535714285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="disclosure" width="8" height="13"/>
+    </resources>
+</document>

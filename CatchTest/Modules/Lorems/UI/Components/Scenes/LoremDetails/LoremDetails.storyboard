@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lorem Details Controller-->
+        <scene sceneID="Ydw-XX-I5K">
+            <objects>
+                <viewController storyboardIdentifier="LoremDetailsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5hi-2W-uC6" customClass="LoremDetailsController" customModule="CatchTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l7G-wc-8cX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSt-No-NYM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ei-Us-0TJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{ Details }}" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJU-W4-1Aq">
+                                                <rect key="frame" x="30" y="30" width="354" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="79r-7r-tlU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                <color key="textColor" red="0.023529411764705882" green="0.035294117647058823" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="VJU-W4-1Aq" firstAttribute="leading" secondItem="0ei-Us-0TJ" secondAttribute="leading" constant="30" id="0yz-9C-o6D"/>
+                                            <constraint firstAttribute="bottom" secondItem="VJU-W4-1Aq" secondAttribute="bottom" constant="30" id="OAo-ST-cZQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="VJU-W4-1Aq" secondAttribute="trailing" constant="30" id="PYX-W6-UzX"/>
+                                            <constraint firstItem="VJU-W4-1Aq" firstAttribute="top" secondItem="0ei-Us-0TJ" secondAttribute="top" constant="30" id="zXA-0j-0Px"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0ei-Us-0TJ" firstAttribute="leading" secondItem="oTp-lo-FrZ" secondAttribute="leading" id="TJ9-nf-7FU"/>
+                                    <constraint firstItem="0ei-Us-0TJ" firstAttribute="bottom" secondItem="oTp-lo-FrZ" secondAttribute="bottom" id="bTL-21-MCs"/>
+                                    <constraint firstItem="0ei-Us-0TJ" firstAttribute="width" secondItem="PfA-gY-CTl" secondAttribute="width" id="ckb-V3-wut"/>
+                                    <constraint firstItem="0ei-Us-0TJ" firstAttribute="top" secondItem="oTp-lo-FrZ" secondAttribute="top" id="kg1-Lh-CzW"/>
+                                    <constraint firstItem="0ei-Us-0TJ" firstAttribute="trailing" secondItem="oTp-lo-FrZ" secondAttribute="trailing" id="taw-ir-qj9"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="oTp-lo-FrZ"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="PfA-gY-CTl"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rmj-9j-8nx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sSt-No-NYM" firstAttribute="top" secondItem="Rmj-9j-8nx" secondAttribute="top" id="m0r-No-cVM"/>
+                            <constraint firstItem="Rmj-9j-8nx" firstAttribute="trailing" secondItem="sSt-No-NYM" secondAttribute="trailing" id="uA7-mG-MzG"/>
+                            <constraint firstItem="sSt-No-NYM" firstAttribute="leading" secondItem="Rmj-9j-8nx" secondAttribute="leading" id="uzw-1H-am2"/>
+                            <constraint firstItem="Rmj-9j-8nx" firstAttribute="bottom" secondItem="sSt-No-NYM" secondAttribute="bottom" id="xKc-0Y-SJL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailsLabel" destination="VJU-W4-1Aq" id="BBg-K2-4LS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EDi-ey-zgy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130" y="-50"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
