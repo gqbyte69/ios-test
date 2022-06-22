@@ -9,6 +9,7 @@ import Foundation
 
 protocol LoremListViewModelProtocol {
   var loremCount: Int { get }
+  var isEmptyState: Bool { get }
 
   func fetchLorems(
     onSuccess: @escaping VoidResult,

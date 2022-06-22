@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,19 +16,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{ Title }}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dv-Ud-pdm">
-                        <rect key="frame" x="15" y="27.5" width="67.5" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{ Title }}" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dv-Ud-pdm">
+                        <rect key="frame" x="15" y="27.5" width="180.5" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="QPL-Dn-g48"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="QPL-Dn-g48"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                         <color key="textColor" red="0.023529411764705882" green="0.035294117647058823" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{ Subtitle }}" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVU-Js-DwJ">
-                        <rect key="frame" x="281.5" y="27.5" width="94.5" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{ Subtitle }}" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVU-Js-DwJ">
+                        <rect key="frame" x="195.5" y="27.5" width="180.5" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="u9n-lY-be1"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="u9n-lY-be1"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                         <color key="textColor" red="0.51372549019607838" green="0.51764705882352935" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,11 +44,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="3Dv-Ud-pdm" firstAttribute="leading" secondItem="5Ij-kV-ws1" secondAttribute="leading" constant="15" id="7RC-aH-esQ"/>
+                    <constraint firstItem="MVU-Js-DwJ" firstAttribute="leading" secondItem="3Dv-Ud-pdm" secondAttribute="trailing" id="El6-MO-mMc"/>
                     <constraint firstItem="3Dv-Ud-pdm" firstAttribute="top" secondItem="5Ij-kV-ws1" secondAttribute="top" constant="27.5" id="WTx-5Q-Mwf"/>
                     <constraint firstItem="7RV-XJ-1XU" firstAttribute="centerY" secondItem="5Ij-kV-ws1" secondAttribute="centerY" id="XxV-MA-0yn"/>
                     <constraint firstAttribute="trailing" secondItem="MVU-Js-DwJ" secondAttribute="trailing" constant="38" id="YMX-7F-7EX"/>
                     <constraint firstItem="MVU-Js-DwJ" firstAttribute="centerY" secondItem="3Dv-Ud-pdm" secondAttribute="centerY" id="Zcy-Gn-VhJ"/>
                     <constraint firstAttribute="bottom" secondItem="3Dv-Ud-pdm" secondAttribute="bottom" constant="27.5" id="bGu-5r-LH7"/>
+                    <constraint firstItem="MVU-Js-DwJ" firstAttribute="width" secondItem="3Dv-Ud-pdm" secondAttribute="width" id="chA-YI-fmZ"/>
                     <constraint firstAttribute="trailing" secondItem="7RV-XJ-1XU" secondAttribute="trailing" constant="15" id="d0d-UD-obm"/>
                 </constraints>
             </tableViewCellContentView>

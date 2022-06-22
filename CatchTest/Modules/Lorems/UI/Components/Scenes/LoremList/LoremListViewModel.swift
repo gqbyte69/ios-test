@@ -35,7 +35,7 @@ extension LoremListViewModel {
   }
 
   func loremDetailsViewModel(for index: Int) -> LoremDetailsViewModelProtocol {
-    LoremDetailsViewModel(detail: lorems[index].content)
+    LoremDetailsViewModel(lorem: lorems[index])
   }
 }
 
@@ -57,4 +57,5 @@ extension LoremListViewModel {
 
 extension LoremListViewModel {
   var loremCount: Int { lorems.count }
+  var isEmptyState: Bool { lorems.count == 0 }
 }

@@ -8,9 +8,8 @@
 import Foundation
 
 protocol LoremsAPI {
-  @discardableResult
   func getLorems(
     onSuccess: @escaping SingleResult<[Lorem]>,
     onError: @escaping ErrorResult
-  ) -> RequestProtocol
+  )
 }

@@ -7,12 +7,15 @@
 
 import UIKit
 
-class LoremListController: ViewController {
+class LoremListController: UIViewController {
   var viewModel: LoremListViewModelProtocol!
 
+  @IBOutlet private(set) var emptyStateScrollView: UIScrollView!
   @IBOutlet private(set) var tableView: UITableView!
 
   private var refreshControl: UIRefreshControl!
+
+  private var emptyStateRefreshControl: UIRefreshControl!
 }
 
 // MARK: - Lifecycle
@@ -27,6 +30,8 @@ extension LoremListController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     navigationController?.setNavigationBarHidden(true, animated: false)
+
+//    refreshData()
   }
 }
 
@@ -34,8 +39,15 @@ extension LoremListController {
 
 private extension LoremListController {
   func setup() {
+    setupInitialVisibility()
     setupCell()
-    setupTableView()
+    setupTableViewRefreshControl()
+    setupEmptyStateViewRefreshControl()
+  }
+
+  func setupInitialVisibility() {
+    emptyStateScrollView.isHidden = false
+    tableView.isHidden = true
   }
 
   func setupCell() {
@@ -45,7 +57,60 @@ private extension LoremListController {
     )
   }
 
-  func setupTableView() {
+  func setupEmptyStateViewRefreshControl() {
+    guard
+      let customView = Bundle.main.loadNibNamed(
+        "CatchRefreshView",
+        owner: nil,
+        options: nil
+      )
+    else {
+      return
+    }
+
+    guard
+      let refreshView = customView[0] as? UIView
+    else {
+      return
+    }
+
+    emptyStateRefreshControl = UIRefreshControl()
+
+    emptyStateRefreshControl.addTarget(
+      self,
+      action: #selector(handleEmptyStatePullToRefresh(_:)),
+      for: .valueChanged
+    )
+    emptyStateScrollView.addSubview(emptyStateRefreshControl)
+
+    let frame = refreshControl.frame
+    refreshView.frame = CGRect(
+      origin: frame.origin,
+      size: CGSize(
+        width: frame.size.width,
+        height: 120
+      )
+    )
+    emptyStateRefreshControl.addSubview(refreshView)
+  }
+
+  func setupTableViewRefreshControl() {
+    guard
+      let customView = Bundle.main.loadNibNamed(
+        "CatchRefreshView",
+        owner: nil,
+        options: nil
+      )
+    else {
+      return
+    }
+
+    guard
+      let refreshView = customView[0] as? UIView
+    else {
+      return
+    }
+
     refreshControl = UIRefreshControl()
     refreshControl.addTarget(
       self,
@@ -53,6 +118,16 @@ private extension LoremListController {
       for: .valueChanged
     )
     tableView.addSubview(refreshControl)
+
+    let frame = refreshControl.frame
+    refreshView.frame = CGRect(
+      origin: frame.origin,
+      size: CGSize(
+        width: frame.size.width,
+        height: 120
+      )
+    )
+    refreshControl.addSubview(refreshView)
   }
 }
 
@@ -71,16 +146,22 @@ private extension LoremListController {
 
 private extension LoremListController {
   @objc
+  func handleEmptyStatePullToRefresh(_ sender: AnyObject) {
+    refreshData()
+  }
+
+  @objc
   func handlePullToRefresh(_ sender: AnyObject) {
-    viewModel.fetchLorems(
-      onSuccess: handleFetchLoremsSuccess(),
-      onError: handleError()
-    )
+    refreshData()
   }
 
   func handleFetchLoremsSuccess() -> VoidResult {
     return { [weak self] in
       guard let self = self else { return }
+      self.refreshControl.endRefreshing()
+      self.emptyStateRefreshControl.endRefreshing()
+      self.tableView.reloadData()
+      self.updateVisibility()
     }
   }
 
@@ -94,6 +175,17 @@ private extension LoremListController {
 // MARK: - Helpers
 
 private extension LoremListController {
+  func refreshData() {
+    viewModel.fetchLorems(
+      onSuccess: handleFetchLoremsSuccess(),
+      onError: handleError()
+    )
+  }
+
+  func updateVisibility() {
+    tableView.isHidden = viewModel.isEmptyState
+    emptyStateScrollView.isHidden = !viewModel.isEmptyState
+  }
 }
 
 // MARK: - UITableViewDataSource

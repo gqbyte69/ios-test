@@ -8,5 +8,6 @@
 import Foundation
 
 protocol LoremDetailsViewModelProtocol {
+  var titleText: String { get }
   var detailText: String { get }
 }

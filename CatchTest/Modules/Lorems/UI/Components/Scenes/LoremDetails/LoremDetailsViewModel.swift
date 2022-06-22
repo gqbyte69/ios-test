@@ -8,15 +8,16 @@
 import Foundation
 
 class LoremDetailsViewModel: LoremDetailsViewModelProtocol {
-  private let detail: String
+  private let lorem: Lorem
 
-  init(detail: String) {
-    self.detail = detail
+  init(lorem: Lorem) {
+    self.lorem = lorem
   }
 }
 
 // MARK: - Getters
 
 extension LoremDetailsViewModel {
-  var detailText: String { detail }
+  var titleText: String { lorem.title }
+  var detailText: String { lorem.content }
 }

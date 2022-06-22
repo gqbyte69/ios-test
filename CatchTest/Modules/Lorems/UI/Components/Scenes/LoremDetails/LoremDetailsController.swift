@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoremDetailsController: ViewController {
+class LoremDetailsController: UIViewController {
   var viewModel: LoremDetailsViewModelProtocol!
 
   @IBOutlet private(set) var detailsLabel: UILabel!
@@ -32,6 +32,7 @@ extension LoremDetailsController {
 
 private extension LoremDetailsController {
   func setup() {
+    title = viewModel.titleText
     detailsLabel.text = viewModel.detailText
   }
 }

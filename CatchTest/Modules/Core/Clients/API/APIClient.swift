@@ -13,7 +13,7 @@ enum AppError: Error {
 }
 
 class APIClient {
-  let baseUrl = "ttps://raw.githubusercontent.com/catchnz/ios-test/master/data/"
+  let baseUrl = "https://raw.githubusercontent.com/catchnz/ios-test/master/data/"
 
   func consumeAPI<T: Codable>(
     usingUrl url: String,
