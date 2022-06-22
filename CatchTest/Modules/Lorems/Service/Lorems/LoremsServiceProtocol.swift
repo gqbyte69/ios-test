@@ -1,13 +1,13 @@
 //
-//  LoremServiceProtocol.swift
+//  LoremsServiceProtocol.swift
 //  CatchTest
 //
-//  Created by Adonis Dumadapat on 6/22/22.
+//  Created by Adonis Dumadapat on 6/23/22.
 //
 
 import Foundation
 
-protocol LoremServiceProtocol {
+protocol LoremsServiceProtocol {
   func fetchLorems(
     onSuccess: @escaping SingleResult<[Lorem]>,
     onError: @escaping ErrorResult

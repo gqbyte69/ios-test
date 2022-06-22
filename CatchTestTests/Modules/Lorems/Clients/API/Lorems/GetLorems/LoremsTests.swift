@@ -1,4 +1,4 @@
-// 
+//
 //  LoremsTests.swift
 //  CatchTestTests
 //
@@ -7,37 +7,45 @@
 
 import Foundation
 
-import Quick
 import Nimble
+import Quick
 
 @testable import CatchTest
 
-class LoremsTests: QuickSpec, EndpointResponseSpec {
+class LoremsTests: QuickSpec {
   override func spec() {
     describe("Lorems") {
-      var apiResponse: APIResponse!
-      var data: Lorem!
-      
+      var data: [Lorem]?
+
       afterEach {
-        apiResponse = nil
         data = nil
       }
-      
+
       context("when decoding status 200 response") {
         beforeEach {
-          apiResponse = self.decodeResponseValue(statusCode: .ok)
+          data = self.getDecodedObject()
         }
-        
+
         it("should have non-nil decoded response") {
-          expect(apiResponse).toNot(beNil())
-        }
-        
-        it("should have 200 status code") {
-          data = apiResponse.decodedValue()
-          
           expect(data).toNot(beNil())
         }
       }
+    }
+  }
+
+  func getDecodedObject() -> [Lorem]? {
+    let bundle = Bundle(for: LoremsTests.self)
+    guard
+      let path = bundle.path(forResource: "LoremsTests_200", ofType: "json")
+    else {
+      return nil
+    }
+    do {
+      let data = try Data(contentsOf: URL(fileURLWithPath: path))
+      let result = try JSONDecoder().decode([Lorem].self, from: data)
+      return result
+    } catch {
+      return nil
     }
   }
 }

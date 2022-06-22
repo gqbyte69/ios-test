@@ -44,7 +44,7 @@ class APIClient {
       )
     )
   }
-  
+
   func handleJSONResponse<T: Codable>(
     uuid: String,
     onSuccess: @escaping SingleResult<T>,
@@ -76,4 +76,3 @@ class APIClient {
     }
   }
 }
-

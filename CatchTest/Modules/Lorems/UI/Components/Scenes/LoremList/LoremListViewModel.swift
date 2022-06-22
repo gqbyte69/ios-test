@@ -10,10 +10,10 @@ import Foundation
 class LoremListViewModel: LoremListViewModelProtocol {
   private(set) var lorems: [Lorem] = []
 
-  private let service: LoremServiceProtocol
+  private let service: LoremsServiceProtocol
 
   init() {
-    service = LoremService(api: APIClient())
+    service = LoremsService(api: APIClient())
   }
 }
 

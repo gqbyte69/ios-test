@@ -12,8 +12,6 @@
 		5E40735128635BE9005F0270 /* Lorem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40735028635BE9005F0270 /* Lorem.swift */; };
 		5E40735428635C85005F0270 /* APIClient+Lorems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40735228635C85005F0270 /* APIClient+Lorems.swift */; };
 		5E40735528635C85005F0270 /* LoremsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40735328635C85005F0270 /* LoremsAPI.swift */; };
-		5E40735828635D66005F0270 /* LoremService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40735628635D66005F0270 /* LoremService.swift */; };
-		5E40735928635D66005F0270 /* LoremServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40735728635D66005F0270 /* LoremServiceProtocol.swift */; };
 		5E40735E28635E49005F0270 /* LoremList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E40735A28635E49005F0270 /* LoremList.storyboard */; };
 		5E40735F28635E49005F0270 /* LoremListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40735B28635E49005F0270 /* LoremListViewModelProtocol.swift */; };
 		5E40736028635E49005F0270 /* LoremListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40735C28635E49005F0270 /* LoremListController.swift */; };
@@ -28,8 +26,6 @@
 		5E40737128636287005F0270 /* LoremDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40736D28636287005F0270 /* LoremDetailsViewModel.swift */; };
 		5E40737A28636C23005F0270 /* LoremsTests_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E40737828636C23005F0270 /* LoremsTests_200.json */; };
 		5E40737B28636C23005F0270 /* LoremsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40737928636C23005F0270 /* LoremsTests.swift */; };
-		5E40738128636CEB005F0270 /* EndpointResponseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40738028636CEB005F0270 /* EndpointResponseSpec.swift */; };
-		5E40738428636D33005F0270 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40738328636D33005F0270 /* Model.swift */; };
 		5EE9D2BA2863596E000D382F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9D2B92863596E000D382F /* AppDelegate.swift */; };
 		5EE9D2C32863596F000D382F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE9D2C22863596F000D382F /* Assets.xcassets */; };
 		5EE9D2C62863596F000D382F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE9D2C42863596F000D382F /* LaunchScreen.storyboard */; };
@@ -37,7 +33,11 @@
 		5EE9D2DB2863596F000D382F /* CatchTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9D2DA2863596F000D382F /* CatchTestUITests.swift */; };
 		5EE9D2DD2863596F000D382F /* CatchTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9D2DC2863596F000D382F /* CatchTestUITestsLaunchTests.swift */; };
 		5EFBA8A9286394A8002E4EFC /* CatchRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EFBA8A8286394A8002E4EFC /* CatchRefreshView.xib */; };
-		5EFBA8AB28639859002E4EFC /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFBA8AA28639859002E4EFC /* HTTPStatusCode.swift */; };
+		5EFBA8B32863A0AE002E4EFC /* MockLoremsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFBA8B22863A0AE002E4EFC /* MockLoremsAPI.swift */; };
+		5EFBA8B82863A19C002E4EFC /* MockLoremsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFBA8B62863A19C002E4EFC /* MockLoremsService.swift */; };
+		5EFBA8B92863A19C002E4EFC /* LoremsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFBA8B72863A19C002E4EFC /* LoremsServiceTests.swift */; };
+		5EFBA8BC2863A1ED002E4EFC /* LoremsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFBA8BA2863A1ED002E4EFC /* LoremsService.swift */; };
+		5EFBA8BD2863A1ED002E4EFC /* LoremsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFBA8BB2863A1ED002E4EFC /* LoremsServiceProtocol.swift */; };
 		6E4C0AFEEA6D594C35400C9E /* libPods-CatchTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C599EF943BD927C1D0E3EE /* libPods-CatchTestTests.a */; };
 		C2C4732D88B99FAF10C7DCA6 /* libPods-CatchTestUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5DCCC86D7E08297EC1BF23 /* libPods-CatchTestUITests.a */; };
 		D212E08B0718149E403F80E4 /* libPods-CatchTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D159B033C58183F23B76AD8F /* libPods-CatchTest.a */; };
@@ -69,8 +69,6 @@
 		5E40735028635BE9005F0270 /* Lorem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lorem.swift; sourceTree = "<group>"; };
 		5E40735228635C85005F0270 /* APIClient+Lorems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Lorems.swift"; sourceTree = "<group>"; };
 		5E40735328635C85005F0270 /* LoremsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremsAPI.swift; sourceTree = "<group>"; };
-		5E40735628635D66005F0270 /* LoremService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremService.swift; sourceTree = "<group>"; };
-		5E40735728635D66005F0270 /* LoremServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremServiceProtocol.swift; sourceTree = "<group>"; };
 		5E40735A28635E49005F0270 /* LoremList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoremList.storyboard; sourceTree = "<group>"; };
 		5E40735B28635E49005F0270 /* LoremListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremListViewModelProtocol.swift; sourceTree = "<group>"; };
 		5E40735C28635E49005F0270 /* LoremListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremListController.swift; sourceTree = "<group>"; };
@@ -85,8 +83,6 @@
 		5E40736D28636287005F0270 /* LoremDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremDetailsViewModel.swift; sourceTree = "<group>"; };
 		5E40737828636C23005F0270 /* LoremsTests_200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LoremsTests_200.json; sourceTree = "<group>"; };
 		5E40737928636C23005F0270 /* LoremsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremsTests.swift; sourceTree = "<group>"; };
-		5E40738028636CEB005F0270 /* EndpointResponseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointResponseSpec.swift; sourceTree = "<group>"; };
-		5E40738328636D33005F0270 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5EE9D2B62863596E000D382F /* CatchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE9D2B92863596E000D382F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EE9D2C22863596F000D382F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,7 +94,11 @@
 		5EE9D2DA2863596F000D382F /* CatchTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchTestUITests.swift; sourceTree = "<group>"; };
 		5EE9D2DC2863596F000D382F /* CatchTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5EFBA8A8286394A8002E4EFC /* CatchRefreshView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatchRefreshView.xib; sourceTree = "<group>"; };
-		5EFBA8AA28639859002E4EFC /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		5EFBA8B22863A0AE002E4EFC /* MockLoremsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoremsAPI.swift; sourceTree = "<group>"; };
+		5EFBA8B62863A19C002E4EFC /* MockLoremsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoremsService.swift; sourceTree = "<group>"; };
+		5EFBA8B72863A19C002E4EFC /* LoremsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremsServiceTests.swift; sourceTree = "<group>"; };
+		5EFBA8BA2863A1ED002E4EFC /* LoremsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremsService.swift; sourceTree = "<group>"; };
+		5EFBA8BB2863A1ED002E4EFC /* LoremsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremsServiceProtocol.swift; sourceTree = "<group>"; };
 		631F71800B10FFD878A3679A /* Pods-CatchTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchTest.release.xcconfig"; path = "Target Support Files/Pods-CatchTest/Pods-CatchTest.release.xcconfig"; sourceTree = "<group>"; };
 		79600C84EC70A228932B2C84 /* Pods-CatchTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchTest.debug.xcconfig"; path = "Target Support Files/Pods-CatchTest/Pods-CatchTest.debug.xcconfig"; sourceTree = "<group>"; };
 		ADC2DE532449ACB94E66B176 /* Pods-CatchTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchTestTests.release.xcconfig"; path = "Target Support Files/Pods-CatchTestTests/Pods-CatchTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,7 +161,6 @@
 		5E40737228636BFD005F0270 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				5E40737C28636CB0005F0270 /* Core */,
 				5E40737328636BFD005F0270 /* Lorems */,
 			);
 			path = Modules;
@@ -171,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				5E40737428636BFD005F0270 /* Clients */,
+				5EFBA8B42863A172002E4EFC /* Services */,
 			);
 			path = Lorems;
 			sourceTree = "<group>";
@@ -195,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				5E40737728636BFD005F0270 /* GetLorems */,
+				5EFBA8B22863A0AE002E4EFC /* MockLoremsAPI.swift */,
 			);
 			path = Lorems;
 			sourceTree = "<group>";
@@ -206,47 +207,6 @@
 				5E40737928636C23005F0270 /* LoremsTests.swift */,
 			);
 			path = GetLorems;
-			sourceTree = "<group>";
-		};
-		5E40737C28636CB0005F0270 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				5E40738228636D26005F0270 /* Models */,
-				5E40737D28636CB0005F0270 /* Clients */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		5E40737D28636CB0005F0270 /* Clients */ = {
-			isa = PBXGroup;
-			children = (
-				5E40737E28636CB0005F0270 /* API */,
-			);
-			path = Clients;
-			sourceTree = "<group>";
-		};
-		5E40737E28636CB0005F0270 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				5E40737F28636CB0005F0270 /* Utils */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		5E40737F28636CB0005F0270 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				5E40738028636CEB005F0270 /* EndpointResponseSpec.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		5E40738228636D26005F0270 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				5E40738328636D33005F0270 /* Model.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		5EE9D2AD2863596D000D382F = {
@@ -306,7 +266,6 @@
 			isa = PBXGroup;
 			children = (
 				5E40734C28635BB6005F0270 /* Closures.swift */,
-				5EFBA8AA28639859002E4EFC /* HTTPStatusCode.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -475,8 +434,25 @@
 		5EE9D2FC28635B05000D382F /* Lorems */ = {
 			isa = PBXGroup;
 			children = (
-				5E40735628635D66005F0270 /* LoremService.swift */,
-				5E40735728635D66005F0270 /* LoremServiceProtocol.swift */,
+				5EFBA8BA2863A1ED002E4EFC /* LoremsService.swift */,
+				5EFBA8BB2863A1ED002E4EFC /* LoremsServiceProtocol.swift */,
+			);
+			path = Lorems;
+			sourceTree = "<group>";
+		};
+		5EFBA8B42863A172002E4EFC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5EFBA8B52863A172002E4EFC /* Lorems */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5EFBA8B52863A172002E4EFC /* Lorems */ = {
+			isa = PBXGroup;
+			children = (
+				5EFBA8B72863A19C002E4EFC /* LoremsServiceTests.swift */,
+				5EFBA8B62863A19C002E4EFC /* MockLoremsService.swift */,
 			);
 			path = Lorems;
 			sourceTree = "<group>";
@@ -689,17 +665,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E40736828635EEC005F0270 /* LoremCellViewModelProtocol.swift in Sources */,
-				5E40735928635D66005F0270 /* LoremServiceProtocol.swift in Sources */,
 				5E40735128635BE9005F0270 /* Lorem.swift in Sources */,
 				5E40737128636287005F0270 /* LoremDetailsViewModel.swift in Sources */,
 				5EE9D2BA2863596E000D382F /* AppDelegate.swift in Sources */,
 				5E40736728635EEC005F0270 /* LoremCell.swift in Sources */,
-				5EFBA8AB28639859002E4EFC /* HTTPStatusCode.swift in Sources */,
+				5EFBA8BC2863A1ED002E4EFC /* LoremsService.swift in Sources */,
 				5E40734D28635BB6005F0270 /* Closures.swift in Sources */,
 				5E40736128635E49005F0270 /* LoremListViewModel.swift in Sources */,
 				5E40737028636287005F0270 /* LoremDetailsController.swift in Sources */,
+				5EFBA8BD2863A1ED002E4EFC /* LoremsServiceProtocol.swift in Sources */,
 				5E40735428635C85005F0270 /* APIClient+Lorems.swift in Sources */,
-				5E40735828635D66005F0270 /* LoremService.swift in Sources */,
 				5E40736628635EEC005F0270 /* LoremCellViewModel.swift in Sources */,
 				5E40736028635E49005F0270 /* LoremListController.swift in Sources */,
 				5E40735528635C85005F0270 /* LoremsAPI.swift in Sources */,
@@ -713,10 +688,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E40738128636CEB005F0270 /* EndpointResponseSpec.swift in Sources */,
 				5EE9D2D12863596F000D382F /* CatchTestTests.swift in Sources */,
 				5E40737B28636C23005F0270 /* LoremsTests.swift in Sources */,
-				5E40738428636D33005F0270 /* Model.swift in Sources */,
+				5EFBA8B82863A19C002E4EFC /* MockLoremsService.swift in Sources */,
+				5EFBA8B92863A19C002E4EFC /* LoremsServiceTests.swift in Sources */,
+				5EFBA8B32863A0AE002E4EFC /* MockLoremsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

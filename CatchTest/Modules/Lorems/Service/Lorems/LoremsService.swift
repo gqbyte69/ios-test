@@ -1,13 +1,13 @@
 //
-//  LoremService.swift
+//  LoremsService.swift
 //  CatchTest
 //
-//  Created by Adonis Dumadapat on 6/22/22.
+//  Created by Adonis Dumadapat on 6/23/22.
 //
 
 import Foundation
 
-class LoremService: LoremServiceProtocol {
+class LoremsService: LoremsServiceProtocol {
   private let api: LoremsAPI
 
   init(api: LoremsAPI) {
@@ -17,7 +17,7 @@ class LoremService: LoremServiceProtocol {
 
 // MARK: - Methods
 
-extension LoremService {
+extension LoremsService {
   func fetchLorems(
     onSuccess: @escaping SingleResult<[Lorem]>,
     onError: @escaping ErrorResult
