@@ -1,24 +1,22 @@
-# iOS Developer Test
+# Catch Design iOS Test App
 
-A simple test for iOS Developers
+## by: Adonis Dumadapat
 
-## Instructions
+# Tool Required
 
-1. Fork or clone this repo
-2. Create an iOS project
-3. Use the design located here: https://www.figma.com/file/Q8IUvJLAxPfR2FsomFhQSV/Catch-Design-–-iOS-Test?node-id=0%3A1
-4. Make the app load the json file remotely from this repo (i.e. `https://raw.githubusercontent.com/catchnz/ios-test/master/data/data.json`) as per the design
-5. Display the data as per the design
-6. Email tech-tests@catchdesign.co.nz with:
-    1. A link to your repo OR
-    2. A zip file of your project including git config/metadata
+1. Xcode (13.3)
+2. Cocoapods (1.11.3)
 
-### Guidelines
+Note: Versions indicated are the versions used in development. Other versions might work but not tested.
 
-1. Your repo needs to include at minimum anything required to get the app working.  Detailed instructions should be provided in the `README.md` file to setup and run the app.
-2. Let us know how long you spent on it
+# Instructions
 
-### Bonus Points
+1. Checkout code
+2. On the root directory, run `pod install`
+  a. If running on an Apple Silicon Machine for the first time, run `arch -x86_64 pod install`
+3. Open the `CatchTest.xcworkspace` file
+4. Select the `CatchTest` scheme
+5. Select a target simulator
+6. Click on the "play" button to run
 
-* Consume dependencies with tools like cocoapods or swift package manager
-* Tests
+
